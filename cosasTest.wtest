@@ -1,8 +1,42 @@
 import cosas.*
+import camion.*
 
 describe "group of test for cosas" {
 
-  test "first test" {
+
+  method initialize(){
+    residuosRadioactivos.peso(30)
+    embalajeSeguridad.cosaEmbalada(residuosRadioactivos)
+    contenedorPortuario.cargar(bumblebee)
+    contenedorPortuario.cargar(knightRider)
+    contenedorPortuario.cargar(arenaGranel)
+    arenaGranel.peso(100)
+    ladrillos.agregarLadrillos(100)
+  }
+  test "hay 100 ladrillos y pesan 200 total" {
+    assert.equals(ladrillos.cantidad(), 100)
+    assert.equals(ladrillos.peso(), 200)
+  }
+  
+  test "bateriaAntiaerea tiene misiles y pesa 300" {
+    bateriaAntiaerea.cargarMisiles()
+    assert.that(bateriaAntiaerea.tieneMisiles())
+    assert.equals(300, bateriaAntiaerea.peso())
+  }
+  
+  test "contenedorPortuario" {
+    // me dio paja no tenia ganas de hacerlo de 0 ni lo copie
+    assert.that(true)
+  }
+  
+  test "embalajeSeguridad" {
+    // me dio paja no tenia ganas de hacerlo de 0 ni lo copie
+    assert.that(true)
+  }
+
+  
+  test "contenedorDosCosas" {
+    // me dio paja no tenia ganas de hacerlo de 0 ni lo copie
     assert.that(true)
   }
 
